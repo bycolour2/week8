@@ -1,0 +1,19 @@
+{
+  "engines": {
+    "node": "14.1.0"
+  },
+  "type": "module",
+  "main": "index.js",
+  "author": "Rustam Kutlakhmetov",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "puppeteer": "^5.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
