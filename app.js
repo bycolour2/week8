@@ -27,7 +27,7 @@ export default (express, puppeteer) => {
         await page.goto(URL)
         await page.click('#bt')
         const value = await page.evaluate(async () => {
-            const input = document.getElementById('#inp')
+            const input = document.getElementById('inp')
             return input.value
         })
         
