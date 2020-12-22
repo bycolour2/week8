@@ -30,7 +30,24 @@ export default (express, puppeteer) => {
             const input = document.getElementById('inp')
             return input.value
         })
-        res.send(value)
+        
+        res.setHeader('Content-Type', 'text/html; charset=UTF-8')
+
+    html = `
+        <input id="inp" type="text" />
+        <button id="bt"></button>
+        <script>
+            const inp = document.querySelector('#inp')
+            const bt = document.querySelector('#bt')
+            bt.addEventListener('click', () => {
+                fetch(inp.value).then(res => res.text()).then(text => inp.value = text)
+            })   
+        </script>
+    `
+
+    res.end(html)
+        
+        // res.send(value)
     })
 
     app.all('*', (req, res) => {
