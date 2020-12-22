@@ -1,5 +1,5 @@
-var express = require("express");
-var puppeteer = require("puppeteer");
+import express from 'express'
+import puppeteer from 'puppeteer'
 
 const app = express();
 
